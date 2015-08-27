@@ -1,7 +1,25 @@
 $(document).ready(function(){
-    $("input").on("click", function(){
-        var result = $(this).val()*Number($(this).parent().prev(".price").text().replace(/[^0-9\.]+/g,""));
-        $(this).parent().next(".total").text("($"+result.toFixed(2)+" total)");
+
+    var randomNumber = Math.floor(Math.random()*9);
+    console.log(randomNumber);
+
+
+
+
+
+
+
+
+    $("btn").on("click", function(){
+
+        if(this.id === randomNumber) {
+          $(this).addclass("winner");
+        }
+        else {
+          $(this).addClass("loser");
+        }
+
+
     });
 
 });
